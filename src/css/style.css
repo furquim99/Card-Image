@@ -1,0 +1,136 @@
+body{
+    background-color: var(--neutral-dark);
+    font-family: 'Outfit', sans-serif;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 25px;
+}
+
+.container{
+    max-width: 346px;
+    background-color: var(--neutral-medium);
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.container .imagem-link{
+    position: relative;
+    display: flex;
+}
+
+.container .imagem-link .imagem{
+    width: 100%;
+    border-radius: 7px;
+}
+
+.container .imagem-link::before{
+    content: '';
+    background-color: cyan;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.container .imagem-link::after{
+    content: '';
+    background: url(../img/icon-view.svg) no-repeat center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+.container .imagem-link:hover::before{
+    opacity: 0.4;
+}
+.container .imagem-link:hover::after{
+    opacity: 1;
+}
+
+.container .titulo-link .titulo{
+    font-size: 22px;
+    color: #ffffff;
+    margin: 25px 0 20px;
+}
+
+.container .titulo-link .titulo:hover{
+    color: var(--medium);
+}
+
+.container .sobre{
+    color: var(--soft);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 25px;
+    margin-bottom: 23px;
+}
+
+.container .informacoes{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 23px;
+}
+
+.container .informacoes .valor{
+    color: var(--medium);
+    display: flex;
+}
+
+.container .informacoes .valor::before{
+    content: '';
+    background-image: url(/src/img/icon-ethereum.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 11px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.container .informacoes .tempo{
+    color: var(--soft);
+    display: flex;
+}
+
+.container .informacoes .tempo::before{
+    content: '';
+    background-image: url(/src/img/icon-clock.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 15px;
+    
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.container .criador {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid var(--neutral-soft);
+    padding-top: 15px;
+}
+
+.container .criador .imagem-criador{
+    max-width: 35px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.container .criador .texto{
+    color: var(--soft);
+}
+
+.container .criador .texto .nome{
+    color: #ffffff;
+}
+
+.container .criador .texto .nome:hover{
+    color: var(--medium);
+}
